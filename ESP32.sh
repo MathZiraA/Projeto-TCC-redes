@@ -134,7 +134,7 @@ void loop(){
 
   int distancia = sensorFrontal.readRangeContinuousMillimeters();
 
-  // 🚨 DESVIO DE OBSTÁCULO
+  // DESVIO DE OBSTÁCULO
   if(distancia < 150){
     Serial.println("Obstáculo detectado!");
     parar();
@@ -146,7 +146,7 @@ void loop(){
     return;
   }
 
-  // 📍 LEITURA LINHA
+  // LEITURA LINHA
   int leitura[8];
   for(int i=0;i<8;i++){
     leitura[i] = mcp.digitalRead(sensores[i]);
